@@ -13,8 +13,6 @@
         android:orientation="vertical"
         tools:context=".MainActivity">
 
-        <!--Edit text to enter course name / note title -->
-
         <EditText
 
             android:id="@+id/idEdtTitle"
@@ -23,9 +21,6 @@
             android:layout_margin="20dp"
             android:hint="Address" />
 
-
-        <!--edit text to enter course duration / description-->
-
         <EditText
 
             android:id="@+id/idEdtDescription"
@@ -33,11 +28,8 @@
             android:layout_height="50dp"
             android:layout_margin="20dp"
             android:ems="10"
-            android:inputType="numberDecimal"
+            android:inputType="numberDecimal|numberSigned"
             android:hint="Latitude" />
-
-
-        <!--edit text to display course tracks / note color -->
 
         <EditText
 
@@ -46,11 +38,9 @@
             android:layout_height="50dp"
             android:layout_margin="20dp"
             android:ems="10"
-            android:inputType="numberDecimal"
+            android:inputType="numberDecimal|numberSigned"
             android:hint="Longitude " />
 
-
-        <!--button for adding new course / add new note button -->
 
         <Button
             android:id="@+id/idBtnAddNote"
@@ -60,7 +50,6 @@
             android:text="Add Coordinate"
             android:textAllCaps="false" />
 
-        <!--new button for opening our course list activity-->
         <Button
             android:id="@+id/idBtnReadNotes"
             android:layout_width="match_parent"

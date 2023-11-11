@@ -19,9 +19,7 @@ public class ViewNotes extends AppCompatActivity {
     private DBHandler dbHandler;
     private NoteRVAdapter noteRVAdapter;
     private RecyclerView notesRV;
-
     private SearchView searchView;   ///// for search function
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,8 +30,7 @@ public class ViewNotes extends AppCompatActivity {
         noteModalArrayList = new ArrayList<>();
         dbHandler = new DBHandler(ViewNotes.this);
 
-        // getting our notes array
-        // list from db handler class.
+        // getting our coordinate array list from db handler class.
         noteModalArrayList = dbHandler.readNotes();
 
         // on below line passing our array list to our adapter class.
@@ -65,13 +62,10 @@ public class ViewNotes extends AppCompatActivity {
 
         //=================================================================================================================================================
 
-        // links add new weigh-in btn to add weight screen
         Button idBtnAddNoteMain = findViewById(R.id.idBtnAddNoteMain);
-
         idBtnAddNoteMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 startActivity(new Intent(ViewNotes.this, MainActivity.class));
             }
         });

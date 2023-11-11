@@ -7,15 +7,13 @@
     android:layout_height="match_parent"
     tools:context=".ViewNotes">
 
-    <!-- SearchView at the top -->
-    <androidx.appcompat.widget.SearchView
+    <SearchView
         android:id="@+id/searchView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         tools:ignore="MissingConstraints" />
 
-    <!-- RecyclerView below the SearchView -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/idRVNotes"
         android:layout_width="match_parent"
@@ -24,13 +22,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginTop="16dp" />
 
-
     <Button
         android:id="@+id/idBtnAddNoteMain"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="Add a Note"
+        android:text="Add a new location"
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/searchView"

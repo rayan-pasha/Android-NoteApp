@@ -1,8 +1,6 @@
 package com.example.lab3;
 public class NoteModal {
 
-    // variables for our note name,
-    // description, color, id.
     private String noteTitle;
     private String noteDescription;
     private String noteColor;

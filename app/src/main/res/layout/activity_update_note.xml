@@ -7,8 +7,6 @@
     android:orientation="vertical"
     tools:context=".UpdateNoteActivity">
 
-
-    <!--edit text to enter note title -->
     <EditText
 
         android:id="@+id/idEdtTitle"
@@ -17,9 +15,6 @@
         android:layout_margin="20dp"
         android:hint="Address" />
 
-
-    <!--edit text to enter note description-->
-
     <EditText
 
         android:id="@+id/idEdtDescription"
@@ -27,12 +22,9 @@
         android:layout_height="50dp"
         android:layout_margin="20dp"
         android:ems="10"
-        android:inputType="numberDecimal"
+        android:inputType="numberDecimal|numberSigned"
         android:hint="Latitude"
         />
-
-
-    <!--edit text to display note color -->
 
     <EditText
 
@@ -41,10 +33,10 @@
         android:layout_height="50dp"
         android:layout_margin="20dp"
         android:ems="10"
-        android:inputType="numberDecimal"
+        android:inputType="numberDecimal|numberSigned"
         android:hint="Longitude" />
 
-    <!--button for updating our note-->
+
     <Button
         android:id="@+id/idBtnUpdateNote"
         android:layout_width="match_parent"
@@ -53,7 +45,6 @@
         android:text="Update Coordinate"
         android:textAllCaps="false" />
 
-    <!--button for deleting our note-->
     <Button
         android:id="@+id/idBtnDelete"
         android:layout_width="match_parent"

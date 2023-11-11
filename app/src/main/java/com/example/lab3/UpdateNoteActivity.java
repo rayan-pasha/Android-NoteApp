@@ -49,7 +49,7 @@ public class UpdateNoteActivity extends AppCompatActivity {
         latitudeEntry.setText(noteDescription);
         longitudeEntry.setText(noteColor);
 
-        // adding on click listener to our update note button.
+        // adding on click listener to our update coordinate button.
         updateNoteBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,11 +57,11 @@ public class UpdateNoteActivity extends AppCompatActivity {
                 String address = determineAddr(v.getContext(), Float.parseFloat(latitudeEntry.getText().toString()), Float.parseFloat(longitudeEntry.getText().toString()));
                 addressEntry.setText(address);
 
-                // inside this method we are calling an update note method and passing all our edit text values.
+                // inside this method we are calling an update coordinate method and passing all our edit text values.
                 dbHandler.updateNote(noteName, addressEntry.getText().toString(), latitudeEntry.getText().toString(), longitudeEntry.getText().toString());
 
-                // displaying a toast message that our note has been updated.
-                Toast.makeText(UpdateNoteActivity.this, "Note Updated..", Toast.LENGTH_SHORT).show();
+                // displaying a toast message that our coordinate has been updated.
+                Toast.makeText(UpdateNoteActivity.this, "Coordinate Updated..", Toast.LENGTH_SHORT).show();
 
                 // launching our main activity.
                 Intent i = new Intent(UpdateNoteActivity.this, MainActivity.class);
@@ -69,25 +69,24 @@ public class UpdateNoteActivity extends AppCompatActivity {
             }
         });
 
-        // adding on click listener for delete button to delete our note.
+        // adding on click listener for delete button to delete our coordinate
         deleteNoteBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // calling a method to delete our note.
                 dbHandler.deleteNote(noteName);
-                Toast.makeText(UpdateNoteActivity.this, "Deleted the note", Toast.LENGTH_SHORT).show();
+                Toast.makeText(UpdateNoteActivity.this, "Deleted the coordinate", Toast.LENGTH_SHORT).show();
                 Intent i = new Intent(UpdateNoteActivity.this, MainActivity.class);
                 startActivity(i);
             }
         });
 
-        // links add new weigh-in btn to add weight screen
+        // links cancel button to add edit coordinate screen
         Button idBtnCancel = findViewById(R.id.idBtnCancel);
 
         idBtnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 startActivity(new Intent(UpdateNoteActivity.this, ViewNotes.class));
             }
         });

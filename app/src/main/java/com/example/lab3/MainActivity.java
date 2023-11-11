@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         // creating a new db-handler class and passing our context to it.
         dbHandler = new DBHandler(MainActivity.this);
 
-        // below line is to add on click listener for our add note button.
+        // below line is to add on click listener for our add coordinate button.
         addNoteBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -45,14 +45,14 @@ public class MainActivity extends AppCompatActivity {
                 String noteDescription = noteDescriptionEdt.getText().toString();
                 String noteColor = noteColorEdt.getText().toString();
 
-                // validating if the text fields are empty or not.
-                if (noteDescription.isEmpty() && noteColor.isEmpty())
+                // validating if the text fields are empty or not. check to make sure theirs a temp address
+                if ((noteDescription.isEmpty() && noteColor.isEmpty()) || noteName.isEmpty())
                 {
                     Toast.makeText(MainActivity.this, "Please enter all the data..", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
-                // on below line we are calling a method to add new note to sqlite data and pass all our values to it.
+                // on below line we are calling a method to add new coordinate to sqlite data and pass all our values to it.
                 dbHandler.addNewNote(noteName, noteDescription, noteColor);
 
                 // after adding the data we are displaying a toast message.
