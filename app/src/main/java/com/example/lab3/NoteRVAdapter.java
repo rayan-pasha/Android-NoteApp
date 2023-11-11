@@ -96,8 +96,6 @@ public class NoteRVAdapter extends RecyclerView.Adapter<NoteRVAdapter.ViewHolder
 
     }
 
-
-
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         // creating variables for our text views.
@@ -109,7 +107,6 @@ public class NoteRVAdapter extends RecyclerView.Adapter<NoteRVAdapter.ViewHolder
             noteTitleTV = itemView.findViewById(R.id.idTVNoteTitle);
             noteDescriptionTV = itemView.findViewById(R.id.idTVNoteDescription);
             noteColorTV = itemView.findViewById(R.id.idTVNoteColor);
-
         }
     }
 }

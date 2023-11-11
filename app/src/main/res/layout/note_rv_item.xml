@@ -10,20 +10,17 @@
 
     <LinearLayout
 
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="3dp"
         android:orientation="vertical">
 
-
-        <!--text view for our note title-->
         <TextView
             android:id="@+id/idTVNoteTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="3dp"
-            android:text="Note Title"
+            android:text="Address"
             android:textSize="20dp"
             android:textColor="@color/black" />
 
@@ -40,20 +37,18 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="3dp"
-                android:text="Note Description"
+                android:text="Latitude"
                 android:textColor="@color/black" />
-
 
         </LinearLayout>
 
-        <!--text view for our note color-->
         <TextView
             android:id="@+id/idTVNoteColor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:padding="3dp"
-            android:text="Note Color"
+            android:text="longitude"
             android:textColor="@color/black" />
 
     </LinearLayout>

@@ -69,9 +69,6 @@
             android:text="View all Coordinates"
             android:textAllCaps="false" />
 
-
-
-
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

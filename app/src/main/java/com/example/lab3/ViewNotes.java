@@ -14,8 +14,7 @@ import java.util.ArrayList;
 
 public class ViewNotes extends AppCompatActivity {
 
-    // creating variables for our array list,
-    // db-handler, adapter and recycler view.
+    // creating variables for our array list, db-handler, adapter and recycler view.
     private ArrayList<NoteModal> noteModalArrayList;
     private DBHandler dbHandler;
     private NoteRVAdapter noteRVAdapter;

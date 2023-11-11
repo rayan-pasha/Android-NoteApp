@@ -61,7 +61,6 @@ public class DBHandler extends SQLiteOpenHelper {
 
     }
 
-
     // this method is use to add new  Notes to our sqlite database.
     public void addNewNote(String noteName, String noteDescription, String noteColor) {
 
@@ -115,7 +114,6 @@ public class DBHandler extends SQLiteOpenHelper {
         return noteModalArrayList;
     }
 
-
     // below is the method for updating our notes
     public void updateNote(String originalNoteName, String noteName, String noteDescription, String noteColor) {
 
@@ -144,8 +142,6 @@ public class DBHandler extends SQLiteOpenHelper {
         db.delete(TABLE_NAME, "title=?", new String[]{noteName});
         db.close();
     }
-
-
     @Override
 
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
