@@ -9,13 +9,13 @@ import java.util.ArrayList;
 public class DBHandler extends SQLiteOpenHelper {
 
     // creating a constant variables for our database.
-    private static final String DB_NAME = "notedb";
+    private static final String DB_NAME = "locationdb";
     private static final int DB_VERSION = 1;
-    private static final String TABLE_NAME = "mynotes";
+    private static final String TABLE_NAME = "locationTB";
     private static final String ID_COL = "id";
-    private static final String TITLE_COL = "title";
-    private static final String DESCRIPTION_COL = "description";
-    private static final String COLOR_COL = "color";
+    private static final String ADDRESS_COL = "address";
+    private static final String LAT_COL = "latitude";
+    private static final String LONG_COL = "longitude";
 
     // creating a constructor for our database handler.
     public DBHandler(Context context) {
@@ -34,11 +34,11 @@ public class DBHandler extends SQLiteOpenHelper {
 
                 + ID_COL + " INTEGER PRIMARY KEY AUTOINCREMENT, "
 
-                + TITLE_COL + " TEXT,"
+                + ADDRESS_COL + " TEXT,"
 
-                + DESCRIPTION_COL + " TEXT,"
+                + LAT_COL + " TEXT,"
 
-                + COLOR_COL + " TEXT)";
+                + LONG_COL + " TEXT)";
 
 
         //exec sql method to execute above sql query
@@ -55,9 +55,9 @@ public class DBHandler extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
 
         //pass all values along with its key and value pair.
-        values.put(TITLE_COL, noteName);
-        values.put(DESCRIPTION_COL, noteDescription);
-        values.put(COLOR_COL, noteColor);
+        values.put(ADDRESS_COL, noteName);
+        values.put(LAT_COL, noteDescription);
+        values.put(LONG_COL, noteColor);
 
         // after adding all values we are passing content values to our table.
         db.insert(TABLE_NAME, null, values);
@@ -103,13 +103,13 @@ public class DBHandler extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
 
         // on below line we are passing all values along with its key and value pair.
-        values.put(TITLE_COL, noteName);
-        values.put(DESCRIPTION_COL, noteDescription);
-        values.put(COLOR_COL, noteColor);
+        values.put(ADDRESS_COL, noteName);
+        values.put(LAT_COL, noteDescription);
+        values.put(LONG_COL, noteColor);
 
         // update method to update our database and passing our values.
         // and we are comparing it with name of our coordinate which is stored in original name variable.
-        db.update(TABLE_NAME, values, TITLE_COL + " = ?", new String[]{originalNoteName});
+        db.update(TABLE_NAME, values, ADDRESS_COL + " = ?", new String[]{originalNoteName});
         db.close();
     }
 
@@ -120,7 +120,7 @@ public class DBHandler extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
 
         // on below line we are calling a method to delete our coordinate and we are comparing it with our address name.
-        db.delete(TABLE_NAME, "title=?", new String[]{noteName});
+        db.delete(TABLE_NAME, "address=?", new String[]{noteName});
         db.close();
     }
     @Override
