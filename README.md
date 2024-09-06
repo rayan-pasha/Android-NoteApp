@@ -1,6 +1,6 @@
 # Android Note App 
 
-- 🤖 Android note taking application with full CRUD funtionality 
+🤖 Android note taking application with full CRUD funtionality 
 
 ☕ Built in Java
 
